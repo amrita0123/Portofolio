@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amrita Shahi — Full-Stack Developer & AI Enthusiast specializing in Django, React, and intelligent application development." />
+  <meta name="keywords" content="Amrita Shahi, Full-Stack Developer, Django, React, AI, Machine Learning, LLM, Portfolio" />
+  <meta name="author" content="Amrita Shahi" />
+  <meta property="og:title" content="Amrita Shahi | Full-Stack Developer & AI Enthusiast" />
+  <meta property="og:description" content="Building intelligent, scalable, and user-centric web applications with modern full-stack technologies and AI." />
+  <meta property="og:type" content="website" />
+  <title>Amrita Shahi | Full-Stack Developer & AI Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Amrita Shahi - Home">
+        <span class="logo-text">Amrita</span><span class="logo-accent">Shahi</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#projects" class="btn btn-nav" aria-label="Explore my projects">Explore Projects</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home" aria-labelledby="heroHeading">
+    <!-- Animated background particles -->
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-gradient-orb orb-1"></div>
+      <div class="hero-gradient-orb orb-2"></div>
+      <div class="hero-gradient-orb orb-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content fade-in-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 id="heroHeading" class="hero-name">Amrita<br /><span class="name-accent">Shahi</span></h1>
+        <p class="hero-title">
+          Full-Stack Developer
+          <span class="title-separator">·</span>
+          AI Enthusiast
+          <span class="title-separator">·</span>
+          <span id="typewriterText"></span><span class="typewriter-cursor"></span>
+        </p>
+        <p class="hero-description">
+          Building <span class="text-accent">intelligent, scalable</span>, and user-centric web applications
+          with modern full-stack technologies and artificial intelligence.
+        </p>
+        <div class="hero-tags" aria-label="Core technologies">
+          <span class="tag">Django</span>
+          <span class="tag">React</span>
+          <span class="tag">Python</span>
+          <span class="tag">AI/ML</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">LLMs</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="viewProjectsBtn">
+            <span>View Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="contactBtn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper fade-in-right">
+        <div class="image-ring ring-outer" aria-hidden="true"></div>
+        <div class="image-ring ring-inner" aria-hidden="true"></div>
+        <div class="image-ring ring-pulse" aria-hidden="true"></div>
+        <!-- Floating tech nodes -->
+        <div class="tech-node node-1" aria-hidden="true">AI</div>
+        <div class="tech-node node-2" aria-hidden="true">ML</div>
+        <div class="tech-node node-3" aria-hidden="true">JS</div>
+        <div class="tech-node node-4" aria-hidden="true">PY</div>
+        <div class="image-frame">
+          <img
+            src="amrita_profile.jpg"
+            alt="Amrita Shahi — Full-Stack Developer and AI Enthusiast"
+            class="hero-photo"
+            id="heroPhoto"
+            fetchpriority="high"
+            loading="eager"
+          />
+        </div>
+        <div class="image-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-label="Scroll down indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about" aria-labelledby="aboutHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get to Know Me</span>
+        <h2 id="aboutHeading" class="section-title">About <span class="title-accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image-container">
+            <img src="amrita_profile.jpg" alt="Amrita Shahi" class="about-photo" />
+            <div class="about-card glass-card">
+              <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">2+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <h3 class="about-subtitle">Full-Stack Developer &amp; AI Explorer</h3>
+          <p class="about-text">
+            I'm Amrita Shahi, a passionate full-stack developer with expertise in <strong>Django and React</strong>, currently pursuing my BSc (Hons) Computing at Islington College / London  Metropolitan University. I thrive at the intersection of web engineering and emerging technologies.
+          </p>
+          <p class="about-text">
+            My development journey spans end-to-end web application development, REST API architecture, AI integration, and LLM-based workflows. I'm deeply interested in <strong>artificial intelligence, AI agents, conversational systems, Large Language Models, and prompt engineering</strong> — exploring how intelligent systems can transform user experiences.
+          </p>
+
+          <div class="about-focus">
+            <h4 class="focus-title">Professional Focus</h4>
+            <div class="focus-grid">
+              <div class="focus-card glass-card">
+                <div class="focus-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <h5>Full-Stack Development</h5>
+                <p>Building complete web applications from frontend interfaces to backend services and databases with scalable architecture.</p>
+              </div>
+              <div class="focus-card glass-card">
+                <div class="focus-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+                <h5>Artificial Intelligence</h5>
+                <p>Exploring ML, LLMs, AI agents, conversational systems, and prompt engineering to build intelligent applications.</p>
+              </div>
+              <div class="focus-card glass-card">
+                <div class="focus-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <h5>User-Centric Design</h5>
+                <p>Creating intuitive, responsive, and practical digital experiences with a focus on usability and performance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              End-to-end web application development
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              REST API design &amp; development
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              LLM-based workflows &amp; prompt engineering
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Data preprocessing &amp; predictive modeling
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Scalable software architecture
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section section-alt" id="skills" aria-labelledby="skillsHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What I Know</span>
+        <h2 id="skillsHeading" class="section-title">Technical <span class="title-accent">Skills</span></h2>
+      </div>
+
+      <div class="skills-categories reveal">
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></span>
+            <h3>AI &amp; Data Analysis</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag ai">Python</span>
+            <span class="skill-tag ai">Pandas</span>
+            <span class="skill-tag ai">NumPy</span>
+            <span class="skill-tag ai">Scikit-learn</span>
+            <span class="skill-tag ai">Jupyter Notebook</span>
+            <span class="skill-tag ai">Data Preprocessing</span>
+            <span class="skill-tag ai">Train-Test Splitting</span>
+            <span class="skill-tag ai">Model Training</span>
+            <span class="skill-tag ai">Predictive Modeling</span>
+            <span class="skill-tag ai">Feature Analysis</span>
+            <span class="skill-tag ai">Model Evaluation</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag lang">Java</span>
+            <span class="skill-tag lang">Advanced Java</span>
+            <span class="skill-tag lang">Python</span>
+            <span class="skill-tag lang">C#</span>
+            <span class="skill-tag lang">SQL</span>
+            <span class="skill-tag lang">HTML</span>
+            <span class="skill-tag lang">CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+            <h3>Frameworks &amp; Libraries</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag framework">Django</span>
+            <span class="skill-tag framework">React</span>
+            <span class="skill-tag framework">ASP.NET Blazor</span>
+            <span class="skill-tag framework">MAUI Hybrid</span>
+            <span class="skill-tag framework">Flutter</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag db">MySQL</span>
+            <span class="skill-tag db">PostgreSQL</span>
+            <span class="skill-tag db">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tool">VS Code</span>
+            <span class="skill-tag tool">Android Studio</span>
+            <span class="skill-tag tool">Git</span>
+            <span class="skill-tag tool">Firebase</span>
+            <span class="skill-tag tool">Eclipse</span>
+            <span class="skill-tag tool">IDLE</span>
+            <span class="skill-tag tool">XAMPP</span>
+            <span class="skill-tag tool">Rider IDE</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+            <h3>Operating Systems</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag os">Windows</span>
+            <span class="skill-tag os">Linux</span>
+            <span class="skill-tag os">Android</span>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card skill-cat-wide">
+          <div class="skill-cat-header">
+            <span class="cat-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+            <h3>Professional Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag soft">Communication</span>
+            <span class="skill-tag soft">Leadership &amp; Team Management</span>
+            <span class="skill-tag soft">Time Management</span>
+            <span class="skill-tag soft">Interpersonal Skills</span>
+            <span class="skill-tag soft">Adaptability</span>
+            <span class="skill-tag soft">Problem-Solving</span>
+            <span class="skill-tag soft">Critical Thinking</span>
+            <span class="skill-tag soft">Collaboration &amp; Teamwork</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="experience section" id="experience" aria-labelledby="experienceHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">My Journey</span>
+        <h2 id="experienceHeading" class="section-title">Work <span class="title-accent">Experience</span></h2>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Frontend Developer Intern</h3>
+                <p class="timeline-company">Ing Tech</p>
+              </div>
+              <span class="timeline-period">Aug 2025 – Nov 2025</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="skill-tag framework">React</span>
+              <span class="skill-tag tool">Git</span>
+              <span class="skill-tag lang">HTML/CSS</span>
+              <span class="skill-tag tool">Agile</span>
+            </div>
+            <ul class="timeline-list" aria-label="Responsibilities">
+              <li>Built responsive and interactive web applications using modern front-end technologies</li>
+              <li>Collaborated with cross-functional teams to deliver high-quality web solutions</li>
+              <li>Debugged and optimized applications to improve performance and user experience</li>
+              <li>Implemented new features and resolved technical issues through structured problem-solving</li>
+              <li>Worked with Agile methodologies and Git-based version-control workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Customer Service Representative Intern</h3>
+                <p class="timeline-company">ING Skill Academy</p>
+              </div>
+              <span class="timeline-period">Aug 2024 – Aug 2025</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="skill-tag soft">Communication</span>
+              <span class="skill-tag soft">Problem-Solving</span>
+              <span class="skill-tag soft">Teamwork</span>
+            </div>
+            <ul class="timeline-list" aria-label="Responsibilities">
+              <li>Managed student inquiries and provided accurate course information</li>
+              <li>Assisted with admissions and supported a smooth student experience</li>
+              <li>Responded to calls and messages professionally and promptly</li>
+              <li>Resolved customer and student issues effectively and empathetically</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section section-alt" id="services" aria-labelledby="servicesHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What I Offer</span>
+        <h2 id="servicesHeading" class="section-title">My <span class="title-accent">Services</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card reveal">
+          <div class="service-icon-wrapper">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">Design clean, intuitive, responsive, and user-centered interfaces with a focus on usability, accessibility, and modern visual design principles.</p>
+          <ul class="service-features" aria-label="Service features">
+            <li>Responsive design for all devices</li>
+            <li>User-centered interface design</li>
+            <li>Modern visual design systems</li>
+            <li>Accessibility-first approach</li>
+          </ul>
+          <div class="service-accent" aria-hidden="true"></div>
+        </div>
+
+        <div class="service-card glass-card reveal">
+          <div class="service-icon-wrapper">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Develop responsive and scalable web applications using modern frontend and backend technologies, delivering complete end-to-end solutions.</p>
+          <ul class="service-features" aria-label="Service features">
+            <li>Full-stack development (Django + React)</li>
+            <li>REST API design &amp; integration</li>
+            <li>Database design &amp; integration</li>
+            <li>AI/ML feature integration</li>
+          </ul>
+          <div class="service-accent" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects" aria-labelledby="projectsHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">My Work</span>
+        <h2 id="projectsHeading" class="section-title">Featured <span class="title-accent">Projects</span></h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="ai" id="filterAI">AI/ML</button>
+        <button class="filter-btn" data-filter="fullstack" id="filterFullStack">Full Stack</button>
+        <button class="filter-btn" data-filter="web" id="filterWeb">Web Development</button>
+        <button class="filter-btn" data-filter="app" id="filterApp">Applications</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Wine Quality Prediction -->
+        <article class="project-card glass-card reveal" data-category="ai" aria-label="Wine Quality Prediction project">
+          <div class="project-card-top">
+            <div class="project-category-badge ai-badge">AI / Machine Learning</div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 21h8"/><path d="M12 15v6"/><path d="M7 3h10l-1 12H8L7 3z"/><path d="M7.5 7h9"/></svg></div>
+              <div class="project-bg-pattern"></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Wine Quality Prediction</h3>
+            <p class="project-desc">Developed and evaluated machine learning models to predict wine quality using Python and Jupyter Notebook. Applied comprehensive data preprocessing, feature analysis, and train-test methodology with performance evaluation across multiple algorithms.</p>
+            <div class="project-algorithms">
+              <span class="algo-tag">KNN</span>
+              <span class="algo-tag">SVM</span>
+              <span class="algo-tag">Random Forest</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Scikit-learn</span>
+              <span class="tech-pill">Jupyter</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-links">
+              <a href="#" class="project-btn" aria-label="View Wine Quality Prediction on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-hover-overlay" aria-hidden="true"></div>
+        </article>
+
+        <!-- My Journal App -->
+        <article class="project-card glass-card reveal" data-category="app" aria-label="My Journal App project">
+          <div class="project-card-top">
+            <div class="project-category-badge app-badge">Cross-Platform Application</div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+              <div class="project-bg-pattern"></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">My Journal App</h3>
+            <p class="project-desc">A cross-platform journal application built with .NET MAUI Blazor Hybrid, delivering a seamless and consistent experience across multiple platforms with a modern, intuitive interface.</p>
+            <div class="project-tech-stack">
+              <span class="tech-pill">.NET MAUI</span>
+              <span class="tech-pill">Blazor Hybrid</span>
+              <span class="tech-pill">C#</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-links">
+              <a href="#" class="project-btn" aria-label="View My Journal App on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-hover-overlay" aria-hidden="true"></div>
+        </article>
+
+        <!-- Hospital Management System -->
+        <article class="project-card glass-card reveal" data-category="fullstack" aria-label="Hospital Management System project">
+          <div class="project-card-top">
+            <div class="project-category-badge fullstack-badge">Full-Stack Web Application</div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/><path d="M10 9h4"/><path d="M12 7v4"/></svg></div>
+              <div class="project-bg-pattern"></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Hospital Management System</h3>
+            <p class="project-desc">Built a comprehensive Hospital Management System using Django with role-based modules for Admin, Receptionist, Doctor, Nurse, Lab Technician, and Pharmacist — streamlining hospital workflows and improving operational efficiency.</p>
+            <div class="project-features">
+              <span class="feature-tag">Patient Registration</span>
+              <span class="feature-tag">Appointment Management</span>
+              <span class="feature-tag">Billing</span>
+              <span class="feature-tag">Lab Reports</span>
+              <span class="feature-tag">Email Notifications</span>
+              <span class="feature-tag">Role-Based Access</span>
+              <span class="feature-tag">Inventory Tracking</span>
+              <span class="feature-tag">Analytics</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Django</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-links">
+              <a href="#" class="project-btn" aria-label="View Hospital Management System on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-hover-overlay" aria-hidden="true"></div>
+        </article>
+
+        <!-- Auto Parts Management System -->
+        <article class="project-card glass-card reveal" data-category="fullstack" aria-label="Auto Parts Management System project">
+          <div class="project-card-top">
+            <div class="project-category-badge fullstack-badge">Full-Stack Web Application</div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div class="project-bg-pattern"></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Auto Parts Management System</h3>
+            <p class="project-desc">Developed an Auto Parts Management System with role-based access for Admin, Staff, and Customers. Features comprehensive inventory management, billing, and automated notification capabilities with a responsive React frontend.</p>
+            <div class="project-features">
+              <span class="feature-tag">Inventory Management</span>
+              <span class="feature-tag">Customer Registration</span>
+              <span class="feature-tag">Billing & Payments</span>
+              <span class="feature-tag">Email Notifications</span>
+              <span class="feature-tag">Role-Based Access</span>
+              <span class="feature-tag">Part Requests</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">ASP.NET</span>
+              <span class="tech-pill">C#</span>
+              <span class="tech-pill">React</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-links">
+              <a href="#" class="project-btn" aria-label="View Auto Parts Management System on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-hover-overlay" aria-hidden="true"></div>
+        </article>
+
+        <!-- Movie Ticketing System -->
+        <article class="project-card glass-card reveal" data-category="web" aria-label="Movie Ticketing System project">
+          <div class="project-card-top">
+            <div class="project-category-badge web-badge">Web Application</div>
+            <div class="project-visual" aria-hidden="true">
+              <div class="project-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
+              <div class="project-bg-pattern"></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Movie Ticketing System</h3>
+            <p class="project-desc">Developed a Movie Ticketing System using ASP.NET Web Forms and SQL Server for efficient movie and ticket management with real-time seat allocation and comprehensive customer management.</p>
+            <div class="project-features">
+              <span class="feature-tag">Movie Scheduling</span>
+              <span class="feature-tag">Ticket Booking</span>
+              <span class="feature-tag">Seat Allocation</span>
+              <span class="feature-tag">Payment Tracking</span>
+              <span class="feature-tag">Real-Time Availability</span>
+              <span class="feature-tag">Customer Management</span>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-pill">ASP.NET</span>
+              <span class="tech-pill">ASPX.CS</span>
+              <span class="tech-pill">SQL Server</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-links">
+              <a href="#" class="project-btn" aria-label="View Movie Ticketing System on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-hover-overlay" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI FOCUS SECTION ===== -->
+  <section class="ai-section section section-alt" id="ai" aria-labelledby="aiHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Frontier</span>
+        <h2 id="aiHeading" class="section-title">AI &amp; Technology <span class="title-accent">Focus</span></h2>
+        <p class="section-subtitle">Beyond traditional web development — exploring the next generation of intelligent software experiences.</p>
+      </div>
+
+      <div class="ai-content">
+        <div class="ai-visual reveal" aria-hidden="true">
+          <canvas id="neuralCanvas"></canvas>
+          <div class="ai-glow"></div>
+        </div>
+
+        <div class="ai-areas reveal">
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg></div>
+            <div>
+              <h3>Artificial Intelligence</h3>
+              <p>Exploring AI systems, intelligent agents, and autonomous workflows.</p>
+            </div>
+          </div>
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div>
+            <div>
+              <h3>Machine Learning</h3>
+              <p>Building predictive models and applying ML algorithms to real-world datasets.</p>
+            </div>
+          </div>
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div>
+              <h3>Conversational Systems</h3>
+              <p>Designing intelligent dialogue systems and conversational AI experiences.</p>
+            </div>
+          </div>
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <h3>Large Language Models</h3>
+              <p>Leveraging LLMs to build smarter, context-aware applications.</p>
+            </div>
+          </div>
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
+            <div>
+              <h3>Prompt Engineering</h3>
+              <p>Crafting precise, effective prompts to guide AI model behavior and output quality.</p>
+            </div>
+          </div>
+          <div class="ai-area-card glass-card">
+            <div class="ai-area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <div>
+              <h3>Predictive Modeling</h3>
+              <p>Developing data-driven models to forecast patterns and outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section class="education section" id="education" aria-labelledby="educationHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Academic Background</span>
+        <h2 id="educationHeading" class="section-title">My <span class="title-accent">Education</span></h2>
+      </div>
+
+      <div class="education-card glass-card reveal">
+        <div class="edu-icon-wrapper" aria-hidden="true">
+          <div class="edu-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="edu-ring"></div>
+        </div>
+        <div class="edu-content">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">BSc (Hons) Computing</h3>
+              <p class="edu-institution">Islington College London / Metropolitan University</p>
+            </div>
+            <span class="edu-period">2023 – Present</span>
+          </div>
+          <p class="edu-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kamal Marg, Kamalpokhari, Kathmandu
+          </p>
+          <p class="edu-desc">Currently pursuing an Honours degree in Computing with a focus on software engineering, full-stack web development, artificial intelligence, and database systems.</p>
+          <div class="edu-status">
+            <span class="status-dot"></span>
+            Currently Enrolled
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section section-alt" id="contact" aria-labelledby="contactHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 id="contactHeading" class="section-title">Let's Build Something <span class="title-accent">Intelligent</span> Together.</h2>
+        <p class="section-subtitle">Have a project in mind or want to discuss opportunities? I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">shahiamrita410@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l1.27-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">9840265647</span>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">https://www.linkedin.com/in/amrita-shahi-79a345320/</span>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">https://github.com/amrita0123</span>
+            </div>
+          </div>
+          <div class="contact-item glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Ekantakuna,Lalitpur</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal">
+          <form action="https://formsubmit.co/shahiamrita410@gmail.com" method="POST" class="contact-form glass-card" id="contactForm" novalidate aria-label="Contact form">
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitContactBtn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              Thank you! Your message has been received.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-bg" aria-hidden="true">
+      <canvas id="footerCanvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Amrita Shahi - Back to top">
+            <span class="logo-text">Amrita</span><span class="logo-accent">Shahi</span>
+          </a>
+          <p class="footer-tagline">Full-Stack Developer · AI Enthusiast</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="GitHub profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Send email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Amrita Shahi. All rights reserved.</p>
+        <p>Built with passion &amp; code.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
